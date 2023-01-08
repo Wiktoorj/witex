@@ -71,7 +71,7 @@ const cennik1more = function () {
         element.classList.toggle('hideTable');
     })
 }
-  
+
 
 const cennik2more = () => {
     second.forEach((element) => {
@@ -125,6 +125,15 @@ cennik6.addEventListener('click', cennik6more)
 cennik7.addEventListener('click', cennik7more)
 cennik8.addEventListener('click', cennik8more)
 cennik9.addEventListener('click', cennik9more)
+
+
+const galleryBtn= document.querySelector('.btnGallery');
+const gallerryHidden= document.querySelector('.hiddenGallery');
+const galleryHide = () => {
+    gallerryHidden.classList.toggle('hidden');
+    }
+
+galleryBtn.addEventListener('click', galleryHide)
 
 // //reklama firm [slider]
 // const time = 2000;
