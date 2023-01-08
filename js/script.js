@@ -45,8 +45,86 @@ const burger = function () {
 burg.addEventListener('click', burger);
 for (a of burgerNavi) a.addEventListener('click', burger);
 
+//oferta
+const cennik1 = document.querySelector('.cennik1');
+const cennik2 = document.querySelector('.cennik2');
+const cennik3 = document.querySelector('.cennik3');
+const cennik4 = document.querySelector('.cennik4');
+const cennik5 = document.querySelector('.cennik5');
+const cennik6 = document.querySelector('.cennik6');
+const cennik7 = document.querySelector('.cennik7');
+const cennik8 = document.querySelector('.cennik8');
+const cennik9 = document.querySelector('.cennik9');
+const first = document.querySelectorAll('.first')
+const second = document.querySelectorAll('.second')
+const third = document.querySelectorAll('.third')
+const forth = document.querySelectorAll('.forth')
+const fifth = document.querySelectorAll('.fifth')
+const sixth = document.querySelectorAll('.sixth')
+const seventh = document.querySelectorAll('.seventh')
+const eighth = document.querySelectorAll('.eighth')
+const nineth = document.querySelectorAll('.nineth')
+const oferta = document.querySelectorAll('table');
+
+const cennik1more = function () {
+    first.forEach((element) => {
+        element.classList.toggle('hideTable');
+    })
+}
+  
+
+const cennik2more = () => {
+    second.forEach((element) => {
+        element.classList.toggle('hideTable');
+    })
+}
+
+const cennik3more = () => {
+    third.forEach((element) => {
+        element.classList.toggle('hideTable');
+    })
+}
+const cennik4more = () => {
+    forth.forEach((element) => {
+        element.classList.toggle('hideTable');
+    })
+}
+const cennik5more = () => {
+    fifth.forEach((element) => {
+        element.classList.toggle('hideTable');
+    })
+}
+const cennik6more = () => {
+    sixth.forEach((element) => {
+        element.classList.toggle('hideTable');
+    })
+}
+const cennik7more = () => {
+    seventh.forEach((element) => {
+        element.classList.toggle('hideTable');
+    })
+}
+const cennik8more = () => {
+    eighth.forEach((element) => {
+        element.classList.toggle('hideTable');
+    })
+}
+const cennik9more = () => {
+    nineth.forEach((element) => {
+        element.classList.toggle('hideTable');
+    })
+}
 
 
+cennik1.addEventListener('click', cennik1more)
+cennik2.addEventListener('click', cennik2more)
+cennik3.addEventListener('click', cennik3more)
+cennik4.addEventListener('click', cennik4more)
+cennik5.addEventListener('click', cennik5more)
+cennik6.addEventListener('click', cennik6more)
+cennik7.addEventListener('click', cennik7more)
+cennik8.addEventListener('click', cennik8more)
+cennik9.addEventListener('click', cennik9more)
 
 // //reklama firm [slider]
 // const time = 2000;
