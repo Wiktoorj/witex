@@ -127,14 +127,81 @@ cennik8.addEventListener('click', cennik8more)
 cennik9.addEventListener('click', cennik9more)
 
 
-const galleryBtn= document.querySelector('.btnGallery');
-const gallerryHidden= document.querySelector('.hiddenGallery');
+const galleryBtn = document.querySelector('.btnGallery');
+const gallerryHidden = document.querySelector('.hiddenGallery');
 const galleryHide = () => {
     gallerryHidden.classList.toggle('hidden');
+}
+
+galleryBtn.addEventListener('click', galleryHide);
+
+
+const time = 2000;
+const divs = [...document.querySelectorAll('.dots div')];
+const iLeft = document.querySelector('.leftt i')
+const iRight = document.querySelector('.rightt i')
+const slide = [{
+        pe: "Wspólnie będziemy pracować nad poprawą mobilności, stabilności oraz siły!"
+    },
+    {
+        pe: "Rozpocznij swoją przygodę z siłownią, treningiem balistycznym lub treningiem funkcjonalnym pod okiem doświadczonego trenera"
+    },
+    {
+        pe: "Ćwicz na najwyższej jakości sprzęcie dla profesjonalistów!"
     }
+]
 
-galleryBtn.addEventListener('click', galleryHide)
+let slideIndex = 0;
 
+const changeDot = () => {
+    const dotIndex = divs.findIndex(div => div.classList.contains('activeDiv'))
+    divs[dotIndex].classList.remove('activeDiv');
+    divs[slideIndex].classList.add('activeDiv');
+}
+
+const changeSlide = () => {
+    slideIndex++;
+    if (slideIndex == slide.length) slideIndex = 0;
+    pe.textContent = slide[slideIndex].pe;
+    changeDot()
+}
+
+let indexInterval = setInterval(changeSlide, time)
+
+const dontRepeatUrself = function () {
+    if (slideIndex < 0) slideIndex = slide.length - 1
+    else if (slideIndex == slide.length) slideIndex = 0;
+    pe.textContent = slide[slideIndex].pe;
+    changeDot()
+    indexInterval = setInterval(changeSlide, time)
+}
+
+const changeManualy = function (e) {
+    if (e.keyCode === 37 || e.keyCode === 39) {
+        clearInterval(indexInterval);
+        e.keyCode === 37 ? slideIndex-- : slideIndex++
+        dontRepeatUrself()
+    }
+}
+
+const left = document.querySelector('.left');
+const right = document.querySelector('.right');
+
+const changeManualyMobileLeft = function () {
+    clearInterval(indexInterval);
+    slideIndex--
+    dontRepeatUrself()
+}
+
+const changeManualyMobileRight = function () {
+    clearInterval(indexInterval);
+    slideIndex++
+    dontRepeatUrself()
+}
+
+window.addEventListener('keydown', changeManualy)
+left.addEventListener('click', changeManualyMobileLeft)
+right.addEventListener('click', changeManualyMobileRight)
 // //reklama firm [slider]
 // const time = 2000;
 // const divs = [...document.querySelectorAll('.dots div')];

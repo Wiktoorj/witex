@@ -1026,13 +1026,92 @@ div.trojkat {
     border: 2px solid black;
 }
 
+#galeria .img {
+    position: relative;
+}
+
+#galeria .img img {
+    display: block;
+    width: 100vw;
+    border-bottom: 2px dashed black;
+    padding: 7vh 0 5vh;
+}
+
+#galeria .img .dots {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dots div.active {
+    background-color: black;
+    box-shadow: 0px 0px 3px 4px white;
+}
+
+#galeria .img .dots div {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+#galeria .reklama {
+    position: relative
+}
+
+#galeria .right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    /* background-color: rgba(0, 0, 0, .7); */
+    z-index: 1;
+}
+
+#galeria .right i {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    font-size: 50px;
+    color: #9c9a9b;
+}
+
+#galeria .left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    /* background-color: rgba(0, 0, 0, .7); */
+    z-index: 1;
+}
+
+#galeria .left i {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    font-size: 50px;
+    color: #9c9a9b;
+}
 
 
+#galeria .modal {}
 
+#galeria .modal a {
+    /* background-color: red; */
 
+}
 
-
-
+#galeria .modal a img {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid black;
+    border-radius:10px;
+}
 
 
 
