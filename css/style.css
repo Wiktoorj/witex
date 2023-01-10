@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Rubik+Mono+One&display=swap');
 
 /* font-family: 'Goldman', cursive; */
 /* font-family: 'Turret Road', cursive; */
@@ -10,7 +11,8 @@
 /* font-family: 'Audiowide', cursive; */
 /* font-family: 'Gruppo', cursive; */
 /* font-family: 'Orbitron', sans-serif; */
-
+/* font-family: 'Audiowide', cursive; */
+/* font-family: 'Rubik Mono One', sans-serif; */
 * {
     margin: 0;
     padding: 0;
@@ -251,11 +253,14 @@ nav ul li a {
     text-decoration: none;
     color: white;
     text-transform: uppercase;
+    letter-spacing: 2px;
     font-size: 19px;
     cursor: pointer;
     transition: .2s;
     z-index: 15;
-    border: 1px solid white;
+    background-color: rgba(0, 0, 0, .1);
+    border: 2px solid white;
+
 }
 
 nav ul li a:hover {
@@ -274,20 +279,44 @@ nav.off {
 }
 
 header {
-    /* margin-top: 25%; */
+    /* margin-top: 25vh; */
     height: 100vh;
     overflow: hidden;
     position: relative;
     color: white;
     text-transform: uppercase;
+    text-align: center
 }
 
-header img {
+header img.makita {
     width: 50%;
     position: absolute;
     top: 7%;
     left: 7%;
-    /* background-color: rgba(0, 0, 0, .3); */
+}
+
+header img.makita2 {
+    width: 50%;
+    position: absolute;
+    top: 7%;
+    left: 7%;
+}
+
+header img.strauss {
+    width: 50%;
+    position: absolute;
+    top: 17%;
+    left: 7%;
+}
+
+header img.witex {
+    width:15%;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%,-50%) scale(10);
+    opacity: .3;
+z-index: -1;
 }
 
 header .blackBackground {
@@ -317,78 +346,59 @@ header .headerMAINinfo {
     position: absolute;
 }
 
-/* slogan remonty nieruchomosci */
-header .headerMAINinfo p {
-    font-size: 14px;
-    font-family: 'Gruppo', cursive;
-    letter-spacing: 1.5px;
-}
-
 /* jackowiak wiktor */
 header .headerMAINinfo h2 {
-    font-size: 19px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-family: 'Audiowide', cursive;
 }
 
 /* WX WITEX */
 header .headerMAINinfo h1 {
-    font-size: 48px;
-    font-family: 'Turret Road', cursive;
-    font-weight: 200;
+    font-size: 60px;
+    font-family: 'Audiowide', cursive;
 }
 
-
-/* specjalista od wykonczen */
-header .headerMAINinfo h3 {
-    font-size: 11px;
+/* remonty wykonczenia */
+header .headerMAINinfo p {
+    font-size: 16px;
+    font-family: 'Gruppo', cursive;
+    letter-spacing: 1.5px;
 }
 
 /* skontaktuj sie by zarezerowwac termin */
 header .headerContact {
     position: absolute;
-    top: 60%;
+    top: 70%;
     left: 4%;
     right: 4%;
     font-size: 16x;
-    text-align: center;
+    letter-spacing: 1.5px;
 }
 
 @media (min-width: 320px) and (orientation: portrait) {
-    header .headerMAINinfo h1 {
-        font-size: 56px;
-    }
-
-    /* specjalista od wykonczen */
-    header .headerMAINinfo h3 {
-        font-size: 13px;
-    }
 
     /* skontaktuj sie by zarezerowwac termin */
     header .headerContact {
-        top: 65%;
         font-size: 18px;
     }
 }
 
 @media (min-width: 350px) and (orientation: portrait) {
 
-    /*remonty nieruchomosci */
+    /*remonty i wykończenia */
     header .headerMAINinfo p {
-        font-size: 20px;
+        font-size: 21px;
     }
 
     /* jackowiak wiktor */
     header .headerMAINinfo h2 {
-        font-size: 26px;
+        font-size: 24px;
     }
 
     /* WX WITEX */
     header .headerMAINinfo h1 {
-        font-size: 64px;
-    }
-
-    /* specjalista od wykonczen */
-    header .headerMAINinfo h3 {
-        font-size: 15px;
+        font-size: 78px;
     }
 
     /* skontaktuj sie by zarezerowwac termin */
@@ -396,7 +406,6 @@ header .headerContact {
         font-size: 20px;
     }
 }
-
 
 @media (min-width: 370px) and (orientation: portrait) {
     div.attachmendFixedCallButton a i {
@@ -406,27 +415,16 @@ header .headerContact {
 
     nav ul li a {
         font-size: 22px;
-        letter-spacing: 1.5px;
-        border: 2px solid white;
     }
 
-    header .headerMAINinfo {
-        left: 8%;
-    }
-
-    /*remonty nieruchomosci */
+    /*remonty i wykończenia */
     header .headerMAINinfo p {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     /* jackowiak wiktor */
     header .headerMAINinfo h2 {
-        font-size: 26px;
-    }
-
-    /* specjalista od wykonczen */
-    header .headerMAINinfo h3 {
-        font-size: 15px;
+        font-size: 25px;
     }
 
     /* skontaktuj sie by zarezerowwac termin */
@@ -435,22 +433,9 @@ header .headerContact {
     }
 }
 
-@media (min-width: 390px) and (orientation: portrait) {
-
-    /* skontaktuj sie by zarezerowwac termin */
-    header .headerContact {
-        bottom: 6%
-    }
-}
-
-@media (min-width: 400px) and (orientation: portrait) {
-    header .headerMAINinfo {
-        left: 10%;
-    }
-
-    /*remonty nieruchomosci */
-    header .headerMAINinfo p {
-        font-size: 22px;
+@media (min-width: 410px) and (orientation: portrait) {
+    nav ul li a {
+        font-size: 34px;
     }
 
     /* jackowiak wiktor */
@@ -458,32 +443,20 @@ header .headerContact {
         font-size: 28px;
     }
 
+    /* WX WITEX */
+    header .headerMAINinfo h1 {
+        font-size: 89px;
+    }
+
+    /*remonty i wykończenia */
+    header .headerMAINinfo p {
+        font-size: 25px;
+    }
+
     /* skontaktuj sie by zarezerowwac termin */
     header .headerContact {
-        font-size: 22px;
-        bottom: 6%;
-        width: 67%;
-    }
-}
-
-@media (min-width: 410px) and (orientation: portrait) {
-    nav ul li a {
-        font-size: 36px;
-        border: 2px solid white;
-    }
-
-    header .headerMAINinfo {
-        left: 10%;
-    }
-
-    /*remonty nieruchomosci */
-    header .headerMAINinfo p {
-        font-size: 20px;
-    }
-
-    /* jackowiak wiktor */
-    header .headerMAINinfo h2 {
-        font-size: 26px;
+        font-size: 25px;
+        letter-spacing: 2px;
     }
 }
 
@@ -495,36 +468,26 @@ header .headerContact {
     }
 
     .burger {
-        transform: scale(1.5);
+        transform: scale(2);
     }
 
     nav ul li a {
         font-size: 42px;
-        border: 2px solid white;
-    }
-
-    header .headerMAINinfo {
-        left: 10%;
-    }
-
-    /* slogan remonty nieruchomosci */
-    header .headerMAINinfo p {
-        font-size: 41px;
     }
 
     /* jackowiak wiktor */
     header .headerMAINinfo h2 {
-        font-size: 51px;
+        font-size: 45px;
     }
 
     /* WX WITEX */
     header .headerMAINinfo h1 {
-        font-size: 125px;
+        font-size: 138px;
     }
 
-    /* specjalista od wykonczen */
-    header .headerMAINinfo h3 {
-        font-size: 29px;
+    /* slogan remonty i wykończenia */
+    header .headerMAINinfo p {
+        font-size: 41px;
     }
 
     /* skontaktuj sie by zarezerowwac termin */
@@ -534,45 +497,10 @@ header .headerContact {
     }
 }
 
-@media (min-width: 912px) and (orientation: portrait) {
-    header .headerMAINinfo {
-        left: 17%;
-    }
-}
-
 @media (min-width: 1024px) and (orientation: portrait) {
-    nav ul li a {
-        font-size: 42px;
-        border: 3px solid white;
-    }
-
-    header .headerMAINinfo {
-        left: 10%;
-    }
-
-    /* slogan remonty nieruchomosci */
-    header .headerMAINinfo p {
-        font-size: 55px;
-    }
-
-    /* jackowiak wiktor */
-    header .headerMAINinfo h2 {
-        font-size: 68px;
-    }
-
-    /* WX WITEX */
-    header .headerMAINinfo h1 {
-        font-size: 165px;
-    }
-
-    /* specjalista od wykonczen */
-    header .headerMAINinfo h3 {
-        font-size: 39px;
-    }
-
     /* skontaktuj sie by zarezerowwac termin */
     header .headerContact {
-        font-size: 38px;
+        font-size: 42px;
         bottom: 7%;
     }
 }
@@ -587,7 +515,6 @@ header .headerContact {
 
     div.attachmendFixedCallButton a i {
         font-size: 1.2rem;
-        border: 2px solid rgb(255, 255, 255);
         padding: 15px;
     }
 
@@ -599,50 +526,46 @@ header .headerContact {
     nav ul li a {
         width: 70%;
         font-size: 22px;
-        border: 2px solid white;
     }
 
     header video {
         left: 50%;
     }
 
-    header img {
-        top: 7%;
-        left: 10%;
-        width: 30%
-            /* transform: scale(0.5); */
+    header img.makita {
+        top: 5%;
+        left: 4%;
+        width: 30%;
+        transform: scale(0.8);
     }
 
     header .headerMAINinfo {
         top: 30%;
-        left: 10%;
-    }
-
-    /* specjalista od wykonczen */
-    header .headerMAINinfo h1 {
-        font-size: 62px;
+        left: 0;
+        right: 0;
     }
 
     /* jackowiak wiktor */
     header .headerMAINinfo h2 {
-        font-size: 25px;
+        font-size: 17px;
     }
 
-    /* remonty nieruchomosci */
+    /* WX WITEX */
+    header .headerMAINinfo h1 {
+        font-size: 56px;
+    }
+
+    /* remonty i wykończenia */
     header .headerMAINinfo p {
         font-size: 19px;
     }
 
-    header .headerMAINinfo h3 {
-        font-size: 14px;
-    }
-
     header .headerContact {
-
         font-size: 13px;
+        top: auto;
         bottom: 10%;
-        right: auto;
-        left: 5%;
+        right: 0;
+        left: 0;
     }
 }
 
@@ -670,7 +593,7 @@ header .headerContact {
         border: 3px solid white;
     }
 
-    /* remonty nieruchomosci */
+    /* remonty i wykończenia */
     header .headerMAINinfo p {
         font-size: 34px;
     }
@@ -752,7 +675,7 @@ header .headerContact {
         opacity: 0;
     }
 
-    /* remonty nieruchomosci */
+    /* remonty i wykończenia */
     header .headerMAINinfo p {
         font-size: 44px;
     }
@@ -840,7 +763,7 @@ header .headerContact {
     font-size: 40px;
     text-decoration: overline;
     text-transform: uppercase;
-    padding: 5vh 0 10% 10%;
+    padding: 0 0 2% 10%;
     text-align: left;
 
 }
@@ -1110,7 +1033,7 @@ div.trojkat {
     display: block;
     margin: 0 auto;
     border: 2px solid black;
-    border-radius:10px;
+    border-radius: 10px;
 }
 
 
