@@ -1028,7 +1028,6 @@ div.trojkat {
     top: 0;
     bottom: 0;
     width: 50%;
-    background-color: rgba(0, 0, 0, .7);
     z-index: 1;
 }
 
@@ -1118,8 +1117,7 @@ div.trojkat {
 
 #galeria .btnGallery {
     width: 60%;
-    margin: 0 auto 5vh;
-
+    margin: 5vh auto;
     text-align: center;
     padding: 10px;
     border-radius: 10px;
