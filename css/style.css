@@ -28,7 +28,9 @@
 
 body {
     font-family: 'Goldman', cursive;
-    max-width: 100%;
+    background-color: #231f20;
+    max-width: 1920px;
+    margin: 0 auto;
     overflow-x: hidden;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -295,28 +297,14 @@ header img.makita {
     left: 7%;
 }
 
-header img.makita2 {
-    width: 50%;
-    position: absolute;
-    top: 7%;
-    left: 7%;
-}
-
-header img.strauss {
-    width: 50%;
-    position: absolute;
-    top: 17%;
-    left: 7%;
-}
-
 header img.witex {
-    width:15%;
+    width: 100%;
     position: absolute;
     top: 50%;
-    left: 60%;
-    transform: translate(-50%,-50%) scale(10);
+    left: 50%;
+    transform: translate(-55%, -50%) scale(5) rotate(90deg);
     opacity: .3;
-z-index: -1;
+    z-index: -1;
 }
 
 header .blackBackground {
@@ -339,10 +327,16 @@ header video {
     z-index: -1;
 }
 
+
+header .makita2,
+header .strauss {
+    display: none;
+}
+
 header .headerMAINinfo {
     top: 30%;
-    left: 5%;
-    right: 5%;
+    left: 0;
+    right: 0%;
     position: absolute;
 }
 
@@ -351,6 +345,13 @@ header .headerMAINinfo h2 {
     font-size: 18px;
     letter-spacing: 2px;
     font-family: 'Audiowide', cursive;
+    background-color: #fc0;
+    color: black;
+}
+
+header .headerMAINinfo h2 {
+    background-color: #fc0;
+    color: black;
 }
 
 /* WX WITEX */
@@ -498,6 +499,7 @@ header .headerContact {
 }
 
 @media (min-width: 1024px) and (orientation: portrait) {
+
     /* skontaktuj sie by zarezerowwac termin */
     header .headerContact {
         font-size: 42px;
@@ -532,11 +534,19 @@ header .headerContact {
         left: 50%;
     }
 
+    header img.witex {
+        width: 100%;
+        position: absolute;
+        top: 55%;
+        left: 60%;
+        transform: translate(-60%, -45%) scale(2.0) rotate(0deg);
+        opacity: .2;
+    }
+
     header img.makita {
         top: 5%;
         left: 4%;
-        width: 30%;
-        transform: scale(0.8);
+        width: 300px;
     }
 
     header .headerMAINinfo {
@@ -561,15 +571,16 @@ header .headerContact {
     }
 
     header .headerContact {
-        font-size: 13px;
+        font-size: 26px;
         top: auto;
-        bottom: 10%;
-        right: 0;
-        left: 0;
+        bottom: 20%;
+        right: 4%;
+        left: 4%;
     }
 }
 
 @media (min-width: 640px) and (orientation: landscape) {
+
     nav ul li a {
         width: 70%;
         font-size: 22px;
@@ -580,17 +591,8 @@ header .headerContact {
         width: 20%
     }
 
-    header .headerContact {
-        font-size: 13px;
-        right: auto;
-        left: 10%;
-    }
-}
-
-@media (min-width: 660px) and (orientation: landscape) {
-    nav ul li a {
-        font-size: 28px;
-        border: 3px solid white;
+    header .headerMAINinfo p {
+        font-size: 19px;
     }
 
     /* remonty i wykończenia */
@@ -608,16 +610,15 @@ header .headerContact {
         font-size: 105px;
     }
 
-    /* specjalista od wykonczen */
-    header .headerMAINinfo h3 {
-        font-size: 25px;
-    }
-
-    /* kontakt */
     header .headerContact {
-        font-size: 15px;
-        right: auto;
-        left: 10%;
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 660px) and (orientation: landscape) {
+    nav ul li a {
+        font-size: 28px;
+        border: 3px solid white;
     }
 }
 
@@ -638,18 +639,43 @@ header .headerContact {
         right: 3%;
     }
 
-
-    /* kontakt */
-    header .headerContact {
-        font-size: 19px;
-        right: auto;
-        left: 10%;
+    header img.witex {
+        transform: translate(-45%, -60%) scale(2.0) rotate(0deg);
     }
 }
 
 @media (min-width: 1000px) and (orientation: landscape) {
     header .headerContact {
         font-size: 23px;
+    }
+
+    header img.witex {
+        transform: translate(-55%, -70%) scale(2.0) rotate(0deg);
+    }
+
+    header .makita2,
+    header .strauss {
+        display: block;
+        position: absolute;
+    }
+
+    header img.makita {
+        top: 5%;
+        left: 7%;
+        width: 250px;
+
+    }
+
+    header .makita2 {
+        left: 50%;
+        transform: translatex(-50%);
+    }
+
+    header .strauss {
+        width: 100px;
+        position: absolute;
+        top: 5%;
+        right: 10%
     }
 }
 
@@ -675,37 +701,18 @@ header .headerContact {
         opacity: 0;
     }
 
-    /* remonty i wykończenia */
-    header .headerMAINinfo p {
-        font-size: 44px;
-    }
-
-    /* jackowiak wiktor */
-    header .headerMAINinfo h2 {
-        font-size: 55px;
-    }
-
-    /* witex */
-    header .headerMAINinfo h1 {
-        font-size: 135px;
-    }
-
-    /* specjalista od wykonczen */
-    header .headerMAINinfo h3 {
-        font-size: 31px;
-    }
-
     /* kontakt */
     header .headerContact {
         font-size: 27px;
-        right: auto;
-        left: 10%;
+        right: 17%;
+        bottom: 12%;
     }
 }
 
 @media (min-width: 1200px) and (orientation: landscape) {
     header .headerContact {
         font-size: 28px;
+
     }
 }
 
@@ -738,7 +745,8 @@ header .headerContact {
     }
 
     header .headerContact {
-        font-size: 31px;
+        font-size: 28px;
+        bottom: 12%
     }
 }
 
@@ -746,6 +754,14 @@ header .headerContact {
     nav {
         height: 40vh;
     }
+
+    header .headerContact {
+        font-size: 28px;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
 }
 
 #oferta {
@@ -754,7 +770,6 @@ header .headerContact {
     background-color: #231f20;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
-    /* font-family: 'Orbitron', sans-serif; */
     padding: 5vh 0 0;
 }
 
@@ -763,9 +778,8 @@ header .headerContact {
     font-size: 40px;
     text-decoration: overline;
     text-transform: uppercase;
-    padding: 0 0 2% 10%;
+    padding: 0 0 4vh 10%;
     text-align: left;
-
 }
 
 #oferta table {
@@ -774,12 +788,11 @@ header .headerContact {
     border-collapse: collapse;
     border: 2px solid black;
     box-shadow: none;
-    transition: .2s;
 }
 
 #oferta caption {
-    font-size: 1.4em;
-    padding: 20px;
+    font-size: 16px;
+    padding: 20px 15px;
     letter-spacing: 2px;
     border-radius: 10px 10px 0 0;
     cursor: pointer;
@@ -792,18 +805,22 @@ header .headerContact {
     color: black;
 }
 
+/* zakres i przedmiot uslug wiersz */
 #oferta thead tr {
     color: #fff;
     background-color: black;
     /* padding: 0 5%; */
 }
 
+/* zakres i przedmiot uslug pole wiersza*/
 #oferta thead tr th {
     padding: 10px 0;
+
 }
 
+/* wiersze cennika */
 #oferta tbody tr {
-    background: #eee;
+    background-color: #eee;
     color: rgb(0, 0, 0);
 }
 
@@ -815,9 +832,21 @@ header .headerContact {
     background: #fc0;
 }
 
+/* wiersz cennika pole wiersza */
 #oferta td {
-    padding: 8px 5px;
     text-align: center;
+}
+
+#oferta td:nth-child(1) {
+    padding: 8px 1px 8px 5px;
+}
+
+#oferta td:nth-child(2) {
+    padding: 8px 0;
+}
+
+#oferta td:nth-child(3) {
+    padding: 8px 5px 8px 0px;
 }
 
 tfoot {
@@ -845,9 +874,10 @@ tfoot.hideTable {
     display: none;
 }
 
+/* ramka do cennika */
 #oferta table.hideTable {
     box-shadow: 0 0 0 3px rgb(0, 0, 0), 0 0 0 6px #231f20, 0 0 0 10px rgb(0, 0, 0);
-    width: 95%
+    /* width: 80% */
 }
 
 #oferta p {
@@ -870,10 +900,6 @@ tfoot.hideTable {
     margin-bottom: 0;
 }
 
-tbody.nineth {
-    font-size: 1.3rem;
-}
-
 div.trojkat {
     clip-path: polygon(100% 50%, 0% 102%, 100% 102%);
     background-color: #474141;
@@ -882,8 +908,96 @@ div.trojkat {
     display: block;
 }
 
-/* galeria */
+@media (min-width: 350px) and (orientation: portrait) {
 
+    #oferta table {
+        width: 90%;
+    }
+
+    #oferta caption {
+        font-size: 17px;
+    }
+
+    #oferta td:nth-child(1) {
+        padding: 9px
+    }
+
+    #oferta td:nth-child(2) {
+        padding: 9px 0;
+    }
+
+    #oferta td:nth-child(3) {
+        padding: 5px;
+    }
+}
+
+@media (min-width: 410px) and (orientation: portrait) {
+    #oferta caption {
+        font-size: 28px;
+    }
+
+    #oferta table {
+        font-size: 19px
+    }
+}
+
+@media (min-width: 750px) and (orientation: portrait) {
+    #oferta p {
+        margin: 5%;
+        text-align: center;
+        letter-spacing: 2px;
+        font-size: 32px;
+    }
+
+    #oferta caption {
+        font-size: 30px
+    }
+
+    #oferta td:nth-child(1),
+    #oferta td:nth-child(2),
+    #oferta td:nth-child(2) {
+        padding: 10px
+    }
+
+}
+
+@media (orientation: landscape) {
+    #oferta table {
+        font-size: 20px;
+        width: 70%;
+    }
+
+
+    #oferta caption {
+        font-size: 30px
+    }
+
+    #oferta td:nth-child(1),
+    #oferta td:nth-child(2),
+    #oferta td:nth-child(2) {
+        padding: 20px
+    }
+
+    #oferta p {
+        margin: 5%;
+        text-align: center;
+        letter-spacing: 2px;
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 1000px) and (orientation: landscape) {
+    #oferta table {
+        width: 50%;
+    }
+
+    #oferta caption {
+        font-size: 29px
+    }
+
+}
+
+/* galeria */
 #galeria {
     min-height: 100vh;
     overflow: hidden;
@@ -897,122 +1011,28 @@ div.trojkat {
     /* position: relative; */
 }
 
-#galeria .galeria {
-    padding: 5vh 5%;
+#galeria .reklama {
+    /* padding: 5vh 5%; */
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-content: space-around;
     flex-wrap: wrap;
     flex-grow: 1;
-}
-
-#galeria .galeria div {
-
-    flex-basis: 21%;
-}
-
-#galeria div img {
-    width: 100%;
-}
-
-#galeria .galeria .hiddenGallery {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-content: space-around;
-    flex-wrap: wrap;
-    flex-grow: 1;
-}
-
-#galeria .galeria .hiddenGallery div {
-    flex-basis: 21%;
-}
-
-#galeria .galeria .hiddenGallery div img {
-    width: 100%;
-}
-
-
-#galeria .galeria .hiddenGallery.hidden {
-    display: none;
-}
-
-#galeria .btnGallery {
-    /* background-color: red; */
-    width: 30%;
-    margin: 0 auto;
-    text-align: center;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, .4);
-    border: 2px solid black;
-}
-
-#galeria .img {
     position: relative;
 }
 
-#galeria .img img {
-    display: block;
-    width: 100vw;
-    border-bottom: 2px dashed black;
-    padding: 7vh 0 5vh;
-}
-
-#galeria .img .dots {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.dots div.active {
-    background-color: black;
-    box-shadow: 0px 0px 3px 4px white;
-}
-
-#galeria .img .dots div {
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    border: 1px solid black;
-}
-
-#galeria .reklama {
-    position: relative
-}
-
-#galeria .right {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 50%;
-    /* background-color: rgba(0, 0, 0, .7); */
-    z-index: 1;
-}
-
-#galeria .right i {
-    position: absolute;
-    right: 5%;
-    top: 50%;
-    font-size: 50px;
-    color: #9c9a9b;
-}
-
-#galeria .left {
+#galeria .reklama .left {
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
     width: 50%;
-    /* background-color: rgba(0, 0, 0, .7); */
+    background-color: rgba(0, 0, 0, .7);
     z-index: 1;
 }
 
-#galeria .left i {
+#galeria .reklama .left i {
     position: absolute;
     left: 5%;
     top: 50%;
@@ -1021,20 +1041,109 @@ div.trojkat {
 }
 
 
-#galeria .modal {}
-
-#galeria .modal a {
-    /* background-color: red; */
-
+#galeria .reklama .right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 1;
 }
 
-#galeria .modal a img {
-    width: 90%;
+#galeria .reklama .right i {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    font-size: 50px;
+    color: #9c9a9b;
+}
+
+#galeria .reklama .img {
+    position: relative
+}
+
+#galeria .reklama .img img {
     display: block;
-    margin: 0 auto;
-    border: 2px solid black;
-    border-radius: 10px;
+    width: 100vw;
+    border-bottom: 2px dashed black;
+    padding: 7vh 0 5vh;
+
 }
+
+#galeria .reklama .img .dots {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#galeria .reklama .img .dots div {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+#galeria .reklama .img .dots.active {
+    background-color: black;
+    box-shadow: 0px 0px 3px 4px white;
+}
+
+#galeria .hiddenGallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    position: relative;
+    font-size: 0;
+}
+
+#galeria .hiddenGallery.hidden {
+    display: none;
+}
+
+#galeria .hiddenGallery a {
+    flex-basis: 25%;
+}
+
+#galeria .hiddenGallery a img {
+    width: 100%;
+}
+
+
+
+#galeria .btnGallery {
+    width: 60%;
+    margin: 0 auto 5vh;
+
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, .4);
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+#galeria .btnGallery:hover {
+    background: #fc0;
+    color: black;
+}
+
+@media (min-width: 320px) and (orientation: portrait) {}
+
+@media (min-width: 320px) and (orientation: portrait) {}
+
+
+
+
+
+
+
 
 
 

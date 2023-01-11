@@ -129,40 +129,62 @@ cennik9.addEventListener('click', cennik9more)
 
 const galleryBtn = document.querySelector('.btnGallery');
 const gallerryHidden = document.querySelector('.hiddenGallery');
+let flag1 = true
+
 const galleryHide = () => {
     gallerryHidden.classList.toggle('hidden');
+    if (flag1 == true) {
+        galleryBtn.textContent = 'mniej'
+        flag1 = !flag1
+    } else {
+        galleryBtn.textContent = 'więcej'
+        flag1 = !flag1;
+    }
 }
 
 galleryBtn.addEventListener('click', galleryHide);
 
-
 const time = 2000;
 const divs = [...document.querySelectorAll('.dots div')];
-const iLeft = document.querySelector('.leftt i')
-const iRight = document.querySelector('.rightt i')
+const img = document.querySelector('.img img')
+const iLeft = document.querySelector('.left i')
+const iRight = document.querySelector('.right i')
 const slide = [{
-        pe: "Wspólnie będziemy pracować nad poprawą mobilności, stabilności oraz siły!"
+        img: "img/portfolio/img1.jpg"
     },
     {
-        pe: "Rozpocznij swoją przygodę z siłownią, treningiem balistycznym lub treningiem funkcjonalnym pod okiem doświadczonego trenera"
+        img: "img/portfolio/img2.jpg"
     },
     {
-        pe: "Ćwicz na najwyższej jakości sprzęcie dla profesjonalistów!"
-    }
+        img: "img/portfolio/img3.jpg"
+    },
+    {
+        img: "img/portfolio/img4.jpg"
+    },
+    {
+        img: "img/portfolio/img5.jpg"
+    },
+    {
+        img: "img/portfolio/img6.jpg"
+    },
+    {
+        img: "img/portfolio/img7.jpg"
+    },
+
 ]
 
 let slideIndex = 0;
 
 const changeDot = () => {
-    const dotIndex = divs.findIndex(div => div.classList.contains('activeDiv'))
-    divs[dotIndex].classList.remove('activeDiv');
-    divs[slideIndex].classList.add('activeDiv');
+    const dotIndex = divs.findIndex(div => div.classList.contains('active'))
+    divs[dotIndex].classList.remove('active');
+    divs[slideIndex].classList.add('active');
 }
 
 const changeSlide = () => {
     slideIndex++;
     if (slideIndex == slide.length) slideIndex = 0;
-    pe.textContent = slide[slideIndex].pe;
+    img.src = slide[slideIndex].img;
     changeDot()
 }
 
@@ -171,7 +193,7 @@ let indexInterval = setInterval(changeSlide, time)
 const dontRepeatUrself = function () {
     if (slideIndex < 0) slideIndex = slide.length - 1
     else if (slideIndex == slide.length) slideIndex = 0;
-    pe.textContent = slide[slideIndex].pe;
+    img.src = slide[slideIndex].img;
     changeDot()
     indexInterval = setInterval(changeSlide, time)
 }
@@ -202,6 +224,7 @@ const changeManualyMobileRight = function () {
 window.addEventListener('keydown', changeManualy)
 left.addEventListener('click', changeManualyMobileLeft)
 right.addEventListener('click', changeManualyMobileRight)
+
 // //reklama firm [slider]
 // const time = 2000;
 // const divs = [...document.querySelectorAll('.dots div')];
