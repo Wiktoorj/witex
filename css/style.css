@@ -1005,12 +1005,14 @@ div.trojkat {
 
 #galeria .reklama {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-content: space-around;
     flex-wrap: wrap;
     flex-grow: 1;
     position: relative;
     font-size: 0;
+    width: 20%
 }
 
 #galeria .reklama .right,
@@ -1049,11 +1051,13 @@ div.trojkat {
 #galeria .reklama .img {
     position: relative;
     box-shadow: 0px 0px 3px 4px white;
+    width: 33.3%%;
+
 
 }
 
 #galeria .reklama .img img {
-    width: 100%;
+    width: 33.3%%;
 }
 
 #galeria .reklama .img .dots {
