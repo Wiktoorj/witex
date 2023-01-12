@@ -29,6 +29,7 @@
 body {
     font-family: 'Goldman', cursive;
     background-color: #231f20;
+    text-transform: uppercase;
     max-width: 1920px;
     margin: 0 auto;
     overflow-x: hidden;
@@ -254,7 +255,6 @@ nav ul li a {
     text-align: center;
     text-decoration: none;
     color: white;
-    text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 19px;
     cursor: pointer;
@@ -286,7 +286,6 @@ header {
     overflow: hidden;
     position: relative;
     color: white;
-    text-transform: uppercase;
     text-align: center
 }
 
@@ -769,7 +768,6 @@ header .headerContact {
     overflow: hidden;
     background-color: #231f20;
     color: rgb(255, 255, 255);
-    text-transform: uppercase;
     padding: 5vh 0 0;
 }
 
@@ -777,7 +775,6 @@ header .headerContact {
     font-weight: 600;
     font-size: 40px;
     text-decoration: overline;
-    text-transform: uppercase;
     padding: 0 0 4vh 10%;
     text-align: left;
 }
@@ -1003,78 +1000,67 @@ div.trojkat {
     overflow: hidden;
     background-color: #474141;
     color: rgb(255, 255, 255);
-    text-transform: uppercase;
-    /* font-family: 'Orbitron', sans-serif; */
-    padding: 5vh 0;
-    min-height: 100vh;
-
-    /* position: relative; */
+    padding: 5vh 0 0;
 }
 
 #galeria .reklama {
-    /* padding: 5vh 5%; */
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     align-content: space-around;
     flex-wrap: wrap;
     flex-grow: 1;
     position: relative;
+    font-size: 0;
+}
+
+#galeria .reklama .right,
+#galeria .reklama .left {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    z-index: 1;
 }
 
 #galeria .reklama .left {
-    position: absolute;
     left: 0;
-    top: 0;
-    bottom: 0;
-    width: 50%;
-    z-index: 1;
+}
+
+#galeria .reklama .right {
+    right: 0;
+}
+
+#galeria .reklama .left i,
+#galeria .reklama .right i {
+    position: absolute;
+    top: 50%;
+    font-size: 50px;
+    color: #9c9a9b;
 }
 
 #galeria .reklama .left i {
-    position: absolute;
     left: 5%;
-    top: 50%;
-    font-size: 50px;
-    color: #9c9a9b;
-}
-
-
-#galeria .reklama .right {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 50%;
-    background-color: rgba(0, 0, 0, .7);
-    z-index: 1;
 }
 
 #galeria .reklama .right i {
-    position: absolute;
     right: 5%;
-    top: 50%;
-    font-size: 50px;
-    color: #9c9a9b;
 }
 
 #galeria .reklama .img {
-    position: relative
+    position: relative;
+    box-shadow: 0px 0px 3px 4px white;
+
 }
 
 #galeria .reklama .img img {
-    display: block;
-    width: 100vw;
-    border-bottom: 2px dashed black;
-    padding: 7vh 0 5vh;
-
+    width: 100%;
 }
 
 #galeria .reklama .img .dots {
     position: absolute;
-    top: 0;
+    bottom: 5%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, 0%);
 }
 
 #galeria .reklama .img .dots div {
@@ -1082,12 +1068,14 @@ div.trojkat {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    border: 1px solid black;
+    margin: 5px;
+    border: 2px solid black;
+
 }
 
-#galeria .reklama .img .dots.active {
-    background-color: black;
+#galeria .reklama .img .dots .active {
     box-shadow: 0px 0px 3px 4px white;
+    background-color: white;
 }
 
 #galeria .hiddenGallery {
@@ -1113,8 +1101,6 @@ div.trojkat {
     width: 100%;
 }
 
-
-
 #galeria .btnGallery {
     width: 60%;
     margin: 5vh auto;
@@ -1130,6 +1116,20 @@ div.trojkat {
 #galeria .btnGallery:hover {
     background: #fc0;
     color: black;
+}
+
+/* opinie   */
+#opinie {
+    min-height: 30vh;
+    position: relative;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    background-color: #231f20;
+}
+
+#opinie .trojkat {
+    clip-path: polygon(0 50%, 0 0, 100% 0);
+    background-color: #474141;
 }
 
 @media (min-width: 320px) and (orientation: portrait) {}
@@ -1164,7 +1164,6 @@ footer p,
 footer a {
     color: yellow;
     text-decoration: none;
-    text-transform: uppercase;
 }
 
 footer a {

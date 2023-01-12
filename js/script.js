@@ -170,7 +170,6 @@ const slide = [{
     {
         img: "img/portfolio/img7.jpg"
     },
-
 ]
 
 let slideIndex = 0;
