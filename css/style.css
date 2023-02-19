@@ -267,9 +267,11 @@ nav ul li a {
 
 nav ul li a:hover {
     color: rgb(0, 0, 0);
-    border: 2px solid yellow;
+    border: 2px solid rgb(0, 89, 255);
+    ;
     background-color: rgb(94, 94, 94);
-    box-shadow: 0 0 0 3px black, 0 0 0 6px yellow;
+    box-shadow: 0 0 0 3px black, 0 0 0 6px rgb(0, 89, 255);
+    ;
 }
 
 nav ul li a i {
@@ -289,21 +291,10 @@ header {
     text-align: center
 }
 
-header img.makita {
+img.makita {
+    display: block;
     width: 50%;
-    position: absolute;
-    top: 7%;
-    left: 7%;
-}
-
-header img.witex {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-55%, -50%) scale(5) rotate(90deg);
-    opacity: .3;
-    z-index: -1;
+    margin: 5vh auto 0;
 }
 
 header .blackBackground {
@@ -344,18 +335,15 @@ header .headerMAINinfo h2 {
     font-size: 18px;
     letter-spacing: 2px;
     font-family: 'Audiowide', cursive;
-    background-color: #fc0;
+    background-color: rgb(0, 89, 255);
     color: black;
 }
 
-header .headerMAINinfo h2 {
-    background-color: #fc0;
-    color: black;
-}
 
 /* WX WITEX */
 header .headerMAINinfo h1 {
-    font-size: 60px;
+    font-size: 38px;
+    margin-top: 2%;
     font-family: 'Audiowide', cursive;
 }
 
@@ -382,6 +370,11 @@ header .headerContact {
     header .headerContact {
         font-size: 18px;
     }
+
+    header video {
+
+        transform: translate(-60%, -50%)
+    }
 }
 
 @media (min-width: 350px) and (orientation: portrait) {
@@ -398,7 +391,7 @@ header .headerContact {
 
     /* WX WITEX */
     header .headerMAINinfo h1 {
-        font-size: 78px;
+        font-size: 40px;
     }
 
     /* skontaktuj sie by zarezerowwac termin */
@@ -445,7 +438,7 @@ header .headerContact {
 
     /* WX WITEX */
     header .headerMAINinfo h1 {
-        font-size: 89px;
+        font-size: 48px;
     }
 
     /*remonty i wykończenia */
@@ -482,7 +475,7 @@ header .headerContact {
 
     /* WX WITEX */
     header .headerMAINinfo h1 {
-        font-size: 138px;
+        font-size: 90px;
     }
 
     /* slogan remonty i wykończenia */
@@ -542,7 +535,7 @@ header .headerContact {
         opacity: .2;
     }
 
-    header img.makita {
+    img.makita {
         top: 5%;
         left: 4%;
         width: 300px;
@@ -658,7 +651,7 @@ header .headerContact {
         position: absolute;
     }
 
-    header img.makita {
+    img.makita {
         top: 5%;
         left: 7%;
         width: 250px;
@@ -768,14 +761,13 @@ header .headerContact {
     overflow: hidden;
     background-color: #231f20;
     color: rgb(255, 255, 255);
-    padding: 5vh 0 0;
 }
 
 .nazwaSekcji {
     font-weight: 600;
     font-size: 40px;
     text-decoration: overline;
-    padding: 0 0 4vh 10%;
+    padding: 5vh 0 4vh 10%;
     text-align: left;
 }
 
@@ -798,7 +790,7 @@ header .headerContact {
 }
 
 #oferta caption:hover {
-    background-color: #fc0;
+    background-color: rgb(0, 89, 255);
     color: black;
 }
 
@@ -826,7 +818,7 @@ header .headerContact {
 }
 
 #oferta tbody tr:hover {
-    background: #fc0;
+    background: rgb(0, 89, 255);
 }
 
 /* wiersz cennika pole wiersza */
@@ -847,8 +839,10 @@ header .headerContact {
 }
 
 tfoot {
-    background-color: #eee;
+    background-color: #231f20;
     height: 5%;
+    /* back */
+
 }
 
 #oferta caption.hideTable {
@@ -885,7 +879,8 @@ tfoot.hideTable {
 }
 
 #oferta p span {
-    color: yellow;
+    color: rgb(0, 89, 255);
+    ;
 }
 
 .blackTable {
@@ -898,11 +893,14 @@ tfoot.hideTable {
 }
 
 div.trojkat {
-    clip-path: polygon(100% 50%, 0% 102%, 100% 102%);
-    background-color: #474141;
     width: 100%;
     height: 15vh;
     display: block;
+}
+
+#oferta .trojkat {
+    clip-path: polygon(100% 50%, 0% 100%, 100% 100%);
+    background-color: #474141;
 }
 
 @media (min-width: 350px) and (orientation: portrait) {
@@ -971,7 +969,7 @@ div.trojkat {
 
     #oferta td:nth-child(1),
     #oferta td:nth-child(2),
-    #oferta td:nth-child(2) {
+    #oferta td:nth-child(3) {
         padding: 20px
     }
 
@@ -984,9 +982,6 @@ div.trojkat {
 }
 
 @media (min-width: 1000px) and (orientation: landscape) {
-    #oferta table {
-        width: 50%;
-    }
 
     #oferta caption {
         font-size: 29px
@@ -996,11 +991,9 @@ div.trojkat {
 
 /* galeria */
 #galeria {
-    min-height: 100vh;
     overflow: hidden;
     background-color: #474141;
     color: rgb(255, 255, 255);
-    padding: 5vh 0 5vh;
 }
 
 #galeria .reklama {
@@ -1049,13 +1042,11 @@ div.trojkat {
 #galeria .reklama .img {
     position: relative;
     box-shadow: 0px 0px 3px 4px white;
-    width: 33.3%%;
-
-
+    /* width: 33.3%; */
 }
 
 #galeria .reklama .img img {
-    width: 33.3%%;
+    width: 100%;
 }
 
 #galeria .reklama .img .dots {
@@ -1089,6 +1080,7 @@ div.trojkat {
     flex-grow: 1;
     position: relative;
     font-size: 0;
+    padding-top: 5vh;
 }
 
 #galeria .hiddenGallery.hidden {
@@ -1105,10 +1097,10 @@ div.trojkat {
 
 #galeria .btnGallery {
     width: 60%;
-    margin: 5vh auto;
+    margin: 5vh auto 0;
     text-align: center;
     padding: 10px;
-    border-radius: 10px;
+    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx border-radius: 10px;
     font-size: 20px;
     background-color: rgba(0, 0, 0, .4);
     border: 2px solid black;
@@ -1116,61 +1108,92 @@ div.trojkat {
 }
 
 #galeria .btnGallery:hover {
-    background: #fc0;
+    background: rgb(0, 89, 255);
     color: black;
 }
 
-/* opinie   */
-#opinie {
-    min-height: 100vh;
-    position: relative;
-    overflow: hidden;
-    color: rgb(255, 255, 255);
+#galeria .trojkat {
+    clip-path: polygon(100% 50%, 0% 100%, 100% 100%);
     background-color: #231f20;
 }
 
-#opinie .trojkat {
-    clip-path: polygon(0 49%, 0 0, 99% 0);
-    background-color: #474141;
-}
-
-#opinie .opinia {
-    border: 2px solid white;
-    border-radius: 10px;
-    padding: 5%;
+/* opinie   */
+#kontakt {
+    padding: 5vh 0;
+    min-height: 20vh;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    background-color: #231f20;
     display: flex;
-    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    -webkit-touch-callout: text;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    position: relative
 }
 
-#opinie .opinia .imie {    padding: 5%;
-}
-
-#opinie .opinia .miejscowosc {}
-
-#opinie .opinia .ocena {
+#kontakt .about {
     background-color: red;
-    display: flex;
 }
 
-#opinie .ocena div {
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-    background-color: yellow;
-    width: 20px;
-    height: 20px;
+#kontakt .about p {}
 
+#kontakt .about p img {}
+
+#kontakt p {
+    font-size: 22px;
 }
 
-#opinie .opinia .trescOpini {}
+#kontakt p,
+#kontakt a {
+    color: rgb(0, 89, 255);
+    ;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 10px;
+}
+
+#kontakt .mail {
+    font-size: 20px
+}
+
+#kontakt a {
+    cursor: pointer;
+    font-size: 22px;
+    animation: blickconatact 2s infinite ease-out;
+}
+
+
+@keyframes blickconatact {
+    1% {
+        color: rgb(0, 89, 255);
+        ;
+    }
+
+    2% {
+        color: red;
+    }
+
+    4% {
+        color: rgb(0, 89, 255);
+        ;
+    }
+}
+
+#kontakt a:hover {
+    animation: none;
+    color: red;
+}
 
 @media (min-width: 320px) and (orientation: portrait) {}
 
 @media (min-width: 320px) and (orientation: portrait) {}
-
-
-
-
-
-
 
 
 
@@ -1178,7 +1201,6 @@ div.trojkat {
 footer {
     min-height: 20vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: black;
@@ -1188,76 +1210,24 @@ footer {
 
 footer p {
     font-size: 22px;
-}
-
-footer p,
-footer a {
-    color: yellow;
+    letter-spacing: 3px;
+    color: rgb(0, 89, 255);
+    ;
     text-decoration: none;
 }
 
-footer a {
-    cursor: pointer;
-    font-size: 22px;
-    animation: blickconatact 2s infinite ease-out;
-}
-
-@keyframes blickconatact {
-    1% {
-        color: yellow;
-    }
-
-    2% {
-        color: red;
-    }
-
-    4% {
-        color: yellow;
-    }
-
-}
-
-footer a:hover {
-    color: red;
-}
-
-footer .footerInfo {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    margin-top: 1%;
-}
-
-footer .footerInfo.footerSpaceBetween {
-    justify-content: center;
-
-}
-
-footer .author {
-    margin-right: 3%;
-}
-
 @media (orientation: portrait) {
-
-    footer a,
     footer p {
-        margin-top: 2vh;
         font-size: 22px;
     }
 
     .mail {
         font-size: 12px;
     }
-
-    footer .footerInfo {
-        flex-direction: column;
-        align-items: center;
-    }
 }
 
 @media (min-width: 370px) and (orientation: portrait) {
 
-    footer a,
     footer p {
         font-size: 27px;
     }

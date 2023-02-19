@@ -1,25 +1,3 @@
-//HAMBURGERshow
-// const showPosition = () => {
-//     const burger = document.querySelector('.burger')
-//     const position = window.scrollY;
-//     const afterheader = document.querySelector('.target').offsetTop
-//     let flag = true;
-
-//     if (position > afterheader / 4) {
-//         burger.classList.remove('head')
-//         flag = false;
-//     } else {
-//         burger.classList.add('head')
-//         flag = true;
-//     }
-
-//     console.log(position, afterheader / 3, flag)
-// }
-// const afterheader = document.querySelector('.target').offsetTop
-
-// window.addEventListener('scroll', showPosition)
-
-
 //pisanie na maszynie [HEADER]
 // const motto = document.querySelector('.motto h2');
 // const quoteAuthors = document.querySelector('.names');
@@ -45,7 +23,16 @@ const burger = function () {
 burg.addEventListener('click', burger);
 for (a of burgerNavi) a.addEventListener('click', burger);
 
-//oferta
+//scroll animate
+$('nav a').on('click', function () {
+    const goToSection = "#" + $(this).attr('class')
+    $('body, html').animate({
+            scrollTop: $(goToSection).offset().top
+        },
+        500)
+})
+
+//oferta tabelki more/less
 const cennik1 = document.querySelector('.cennik1');
 const cennik2 = document.querySelector('.cennik2');
 const cennik3 = document.querySelector('.cennik3');
@@ -127,6 +114,8 @@ cennik8.addEventListener('click', cennik8more)
 cennik9.addEventListener('click', cennik9more)
 
 
+
+//galeria more/less
 const galleryBtn = document.querySelector('.btnGallery');
 const gallerryHidden = document.querySelector('.hiddenGallery');
 let flag1 = true
@@ -144,6 +133,8 @@ const galleryHide = () => {
 
 galleryBtn.addEventListener('click', galleryHide);
 
+
+//gallery slideshow
 const time = 2000;
 const divs = [...document.querySelectorAll('.dots div')];
 const img = document.querySelector('.img img')
@@ -169,7 +160,7 @@ const slide = [{
     },
     {
         img: "img/portfolio/img7.jpg"
-    },
+    }
 ]
 
 let slideIndex = 0;
@@ -223,84 +214,6 @@ const changeManualyMobileRight = function () {
 window.addEventListener('keydown', changeManualy)
 left.addEventListener('click', changeManualyMobileLeft)
 right.addEventListener('click', changeManualyMobileRight)
-
-// //reklama firm [slider]
-// const time = 2000;
-// const divs = [...document.querySelectorAll('.dots div')];
-// const img = document.querySelector('.partners img')
-// const iLeft = document.querySelector('.left i')
-// const iRight = document.querySelector('.right i')
-// const slide = [{
-//         img: "img/partnersSmall/partner0.png"
-//     },
-//     {
-//         img: "img/partnersSmall/partner1.png"
-//     },
-//     {
-//         img: "img/partnersSmall/partner2.png"
-//     },
-//     {
-//         img: "img/partnersSmall/partner3.png"
-//     },
-//     {
-//         img: "img/partnersSmall/partner4.png"
-//     },
-//     {
-//         img: "img/partnersSmall/partner5.png"
-//     }
-// ]
-
-// let slideIndex = 0;
-
-// const changeDot = () => {
-//     const dotIndex = divs.findIndex(div => div.classList.contains('active'))
-//     divs[dotIndex].classList.remove('active');
-//     divs[slideIndex].classList.add('active');
-// }
-
-// const changeSlide = () => {
-//     slideIndex++;
-//     if (slideIndex == slide.length) slideIndex = 0;
-//     img.src = slide[slideIndex].img;
-//     changeDot()
-// }
-
-// let indexInterval = setInterval(changeSlide, time)
-
-// const dontRepeatUrself = function () {
-//     if (slideIndex < 0) slideIndex = slide.length - 1
-//     else if (slideIndex == slide.length) slideIndex = 0;
-//     img.src = slide[slideIndex].img;
-//     changeDot()
-//     indexInterval = setInterval(changeSlide, time)
-// }
-
-// const changeManualy = function (e) {
-//     if (e.keyCode === 37 || e.keyCode === 39) {
-//         clearInterval(indexInterval);
-//         e.keyCode === 37 ? slideIndex-- : slideIndex++
-//         dontRepeatUrself()
-//     }
-// }
-
-// const left = document.querySelector('.left');
-// const right = document.querySelector('.right');
-
-// const changeManualyMobileLeft = function () {
-//     clearInterval(indexInterval);
-//     slideIndex--
-//     dontRepeatUrself()
-// }
-
-// const changeManualyMobileRight = function () {
-//     clearInterval(indexInterval);
-//     slideIndex++
-//     dontRepeatUrself()
-// }
-
-// window.addEventListener('keydown', changeManualy)
-// left.addEventListener('click', changeManualyMobileLeft)
-// right.addEventListener('click', changeManualyMobileRight)
 
 
 // //left - right art 1-5
@@ -357,81 +270,3 @@ right.addEventListener('click', changeManualyMobileRight)
 // }
 
 // window.addEventListener('scroll', showArt)
-
-
-// //more
-
-// const buton1 = document.querySelector('.first');
-// const buton2 = document.querySelector('.second');
-// const buton3 = document.querySelector('.third');
-
-// const faq1btn = document.querySelector('.faqBtn1');
-// const faq2btn = document.querySelector('.faqBtn2');
-// const faq3btn = document.querySelector('.faqBtn3');
-
-// const p1 = document.querySelector('.pFirst');
-// const p2 = document.querySelector('.pSecond');
-// const p3 = document.querySelector('.pThird');
-
-// const p1faq = document.querySelectorAll('.faq1');
-// const p2faq = document.querySelector('.faq2');
-// const p3faq = document.querySelector('.faq3');
-
-// let flag1 = true
-// let flag2 = true
-// let flag3 = true
-
-// const firstMore = () => {
-//     p1.classList.toggle('off')
-//     if (flag1 == true) {
-//         buton1.textContent = 'mniej'
-//         flag1 = !flag1
-//     } else {
-//         buton1.textContent = 'więcej'
-//         flag1 = !flag1;
-//     }
-// }
-// const secondMore = () => {
-//     p2.classList.toggle('off')
-//     if (flag2 == true) {
-//         buton2.textContent = 'mniej'
-//         flag2 = !flag2
-//     } else {
-//         buton2.textContent = 'więcej'
-//         flag2 = !flag2;
-//     }
-// }
-// const thirdMore = () => {
-//     p3.classList.toggle('off')
-//     if (flag3 == true) {
-//         buton3.textContent = 'mniej'
-//         flag3 = !flag3
-//     } else {
-//         buton3.textContent = 'więcej'
-//         flag3 = !flag3
-//     }
-// }
-
-// const faq1more = () => {
-//     p1faq.forEach(p => p.classList.toggle('off'))
-//     document.querySelectorAll('.fa-arrow-up.faq1i').forEach(arrowUp => arrowUp.classList.toggle('off'))
-//     document.querySelectorAll('.fa-arrow-down.faq1i').forEach(arrowDown => arrowDown.classList.toggle('off'))
-// }
-// const faq2more = () => {
-//     p2faq.classList.toggle('off')
-//     document.querySelectorAll('.fa-arrow-up.faq2i').forEach(arrowUp => arrowUp.classList.toggle('off'))
-//     document.querySelectorAll('.fa-arrow-down.faq2i').forEach(arrowDown => arrowDown.classList.toggle('off'))
-// }
-// const faq3more = () => {
-//     p3faq.classList.toggle('off')
-//     document.querySelectorAll('.fa-arrow-up.faq3i').forEach(arrowUp => arrowUp.classList.toggle('off'))
-//     document.querySelectorAll('.fa-arrow-down.faq3i').forEach(arrowDown => arrowDown.classList.toggle('off'))
-// }
-
-// buton1.addEventListener('click', firstMore)
-// buton2.addEventListener('click', secondMore)
-// buton3.addEventListener('click', thirdMore)
-
-// faq1btn.addEventListener('click', faq1more)
-// faq2btn.addEventListener('click', faq2more)
-// faq3btn.addEventListener('click', faq3more)
