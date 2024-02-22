@@ -1099,8 +1099,13 @@ div.trojkat {
     width: 60%;
     margin: 5vh auto 0;
     text-align: center;
+<<<<<<< HEAD
+    padding: 10px;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    border-radius: 10px;
+=======
     padding: 10px;
     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx border-radius: 10px;
+>>>>>>> 228fe480a7b5ffcd240ae46e81afd6c8a6cc677a
     font-size: 20px;
     background-color: rgba(0, 0, 0, .4);
     border: 2px solid black;
@@ -1134,6 +1139,13 @@ div.trojkat {
     -moz-user-select: text;
     -ms-user-select: text;
     user-select: text;
+<<<<<<< HEAD
+
+}
+
+#kontakt .about {background-color: red;}
+
+=======
     position: relative
 }
 
@@ -1141,6 +1153,7 @@ div.trojkat {
     background-color: red;
 }
 
+>>>>>>> 228fe480a7b5ffcd240ae46e81afd6c8a6cc677a
 #kontakt .about p {}
 
 #kontakt .about p img {}
@@ -1151,18 +1164,31 @@ div.trojkat {
 
 #kontakt p,
 #kontakt a {
+<<<<<<< HEAD
+    color: yellow;
+=======
     color: rgb(0, 89, 255);
     ;
+>>>>>>> 228fe480a7b5ffcd240ae46e81afd6c8a6cc677a
     text-decoration: none;
     text-align: center;
     display: block;
     padding: 10px;
+<<<<<<< HEAD
 }
 
 #kontakt .mail {
     font-size: 20px
 }
 
+=======
+}
+
+#kontakt .mail {
+    font-size: 20px
+}
+
+>>>>>>> 228fe480a7b5ffcd240ae46e81afd6c8a6cc677a
 #kontakt a {
     cursor: pointer;
     font-size: 22px;
@@ -1211,8 +1237,12 @@ footer {
 footer p {
     font-size: 22px;
     letter-spacing: 3px;
+<<<<<<< HEAD
+    color: yellow;
+=======
     color: rgb(0, 89, 255);
     ;
+>>>>>>> 228fe480a7b5ffcd240ae46e81afd6c8a6cc677a
     text-decoration: none;
 }
 
